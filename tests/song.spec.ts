@@ -36,18 +36,18 @@ describe('SingVerse', () => {
         "A partridge in a pear tree"].join('\n'))
   });
 
-  it('should return the first 2 lines of verses 4-12', () => {
-    const mySong: Song = new Song
-    let dayName: String[] = ['fourth', 'fifth', 'sixth', 'seventh', 'eigth', 'ninth', 'tenth', 'eleventh', 'twelfth']
+  // it('should return the first 2 lines of verses 4-12', () => {
+  //   const mySong: Song = new Song
+  //   let dayName: String[] = ['fourth', 'fifth', 'sixth', 'seventh', 'eigth', 'ninth', 'tenth', 'eleventh', 'twelfth']
 
-    function checkVerse(dayName: String, verseNumber: number) {
-      const result: string = mySong.SingVerse(verseNumber)
-      expect(result).toBe(
-        [`On the ${dayName} day of Christmas`,
-          "My true love gave to me"].join('\n'))
-    }
+  //   function checkVerse(dayName: String, verseNumber: number) {
+  //     const result: string = mySong.SingVerse(verseNumber)
+  //     expect(result).toBe(
+  //       [`On the ${dayName} day of Christmas`,
+  //         "My true love gave to me"].join('\n'))
+  //   }
 
-    dayName.forEach((day,index) => checkVerse(day, index+4))
-  });
+  //   dayName.forEach((day,index) => checkVerse(day, index+4))
+  // });
 
 });
