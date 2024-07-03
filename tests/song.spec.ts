@@ -36,6 +36,26 @@ describe('SingVerse', () => {
         "A partridge in a pear tree"].join('\n'))
   });
 
+  it('should return the 12th verse', () => {
+    const mySong: Song = new Song
+    const result: string = mySong.SingVerse(12)
+    expect(result).toBe(
+      ["On the twelfth day of Christmas",
+        "My true love gave to me",
+        "Twelve drummers drumming",
+        "Eleven pipers piping",
+        "Ten lords a-leaping",
+        "Nine ladies dancing",
+        "Eight maids a-milking",
+        "Seven swans swimming",
+        "Six geese a-laying",
+        "Five gold rings",
+        "Four calling birds",
+        "Three french hens",
+        "Two turtle doves, and",
+        "A partridge in a pear tree"].join('\n'))
+  })
+
   // it('should return the first 2 lines of verses 4-12', () => {
   //   const mySong: Song = new Song
   //   let dayName: String[] = ['fourth', 'fifth', 'sixth', 'seventh', 'eigth', 'ninth', 'tenth', 'eleventh', 'twelfth']
