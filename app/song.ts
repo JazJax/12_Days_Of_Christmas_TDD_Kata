@@ -1,4 +1,13 @@
 export class Song {
+
+    SingSong(): string {
+        let verseArray: String[] = []
+
+        verseArray.push(this.SingVerse(1))
+        
+        return verseArray.join("\n\n")
+    }
+
     SingVerse(verseNumber: number): string {
         let dayName: String[] = [
             'first','second', 'third', 'fourth'
