@@ -7,6 +7,9 @@ export class Song {
 
         if(verseNumber == 1){
             resultArray.push('A partridge in a pear tree')
+        } else if(verseNumber == 2){
+            resultArray.push('Two turtle doves, and')
+            resultArray.push('A partridge in a pear tree')
         }
         
         return resultArray.join('\n')
