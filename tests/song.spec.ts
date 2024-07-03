@@ -5,19 +5,34 @@ import { Song } from '@/song';
 // Should return the first line of any verse
 
 
-describe('song', () => {
+describe('SingVerse', () => {
   it('should return the first 2 lines of the 1st verse', () => {
     const mySong: Song = new Song
     const result: string = mySong.SingVerse(1)
     expect(result).toBe(
       ["On the first day of Christmas",
-      "My true love gave to me"].join('\n'))
+        "My true love gave to me"].join('\n'))
   });
-  it('should return the first line of the 2nd verse', () => {
+
+  it('should return the first 2 lines of the 2nd verse', () => {
     const mySong: Song = new Song
     const result: string = mySong.SingVerse(2)
     expect(result).toBe(
       ["On the second day of Christmas",
-      "My true love gave to me"].join('\n'))
+        "My true love gave to me"].join('\n'))
+  });
+
+  it('should return the first 2 lines of any verse', () => {
+    const mySong: Song = new Song
+    let dayName: String[] = ['first','second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eigth', 'ninth', 'tenth', 'eleventh', 'twelfth']
+
+    function checkVerse(dayName: String, verseNumber: number) {
+      const result: string = mySong.SingVerse(verseNumber)
+      expect(result).toBe(
+        [`On the ${dayName} day of Christmas`,
+          "My true love gave to me"].join('\n'))
+    }
+
+    dayName.forEach((day,index) => checkVerse(day, index+1))
   });
 });
