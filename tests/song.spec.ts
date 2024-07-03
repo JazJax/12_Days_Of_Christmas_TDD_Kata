@@ -6,13 +6,14 @@ import { Song } from '@/song';
 
 
 describe('SingVerse', () => {
-  it('should return the first 2 lines of the 1st verse', () => {
+  it('should return the first verse', () => {
     const mySong: Song = new Song
     const result: string = mySong.SingVerse(1)
     expect(result).toBe(
       ["On the first day of Christmas",
-        "My true love gave to me"].join('\n'))
-  });
+        "My true love gave to me",
+      "A partridge in a pear tree"].join('\n'))
+  })
 
   it('should return the first 2 lines of the 2nd verse', () => {
     const mySong: Song = new Song
@@ -22,9 +23,9 @@ describe('SingVerse', () => {
         "My true love gave to me"].join('\n'))
   });
 
-  it('should return the first 2 lines of any verse', () => {
+  it('should return the first 2 lines of any verse except the first', () => {
     const mySong: Song = new Song
-    let dayName: String[] = ['first','second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eigth', 'ninth', 'tenth', 'eleventh', 'twelfth']
+    let dayName: String[] = ['second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eigth', 'ninth', 'tenth', 'eleventh', 'twelfth']
 
     function checkVerse(dayName: String, verseNumber: number) {
       const result: string = mySong.SingVerse(verseNumber)
@@ -33,6 +34,7 @@ describe('SingVerse', () => {
           "My true love gave to me"].join('\n'))
     }
 
-    dayName.forEach((day,index) => checkVerse(day, index+1))
+    dayName.forEach((day,index) => checkVerse(day, index+2))
   });
+
 });
