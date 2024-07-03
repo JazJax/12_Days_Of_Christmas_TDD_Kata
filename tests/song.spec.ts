@@ -58,12 +58,19 @@ describe('SingVerse', () => {
 });
 
 describe('SingSong', () => {
-  it('should sing the first verse', () => {
+  it('should sing the first 2 verses', () => {
     const mySong: Song = new Song
     const result: string = mySong.SingSong()
+    console.log(result)
     expect(result).toBe(
       ["On the first day of Christmas",
         "My true love gave to me",
-      "A partridge in a pear tree"].join('\n'))
+        "A partridge in a pear tree",
+        "\n",
+        "On the second day of Christmas",
+        "My true love gave to me",
+        "Two turtle doves, and",
+        "A partridge in a pear tree"
+      ].join('\n'))
   })
 })

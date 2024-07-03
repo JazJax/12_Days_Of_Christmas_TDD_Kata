@@ -4,8 +4,9 @@ export class Song {
         let verseArray: String[] = []
 
         verseArray.push(this.SingVerse(1))
+        verseArray.push(this.SingVerse(2))
         
-        return verseArray.join("\n\n")
+        return verseArray.join("\n\n\n")
     }
 
     SingVerse(verseNumber: number): string {
