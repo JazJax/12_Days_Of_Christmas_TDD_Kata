@@ -1,11 +1,10 @@
-# TypeScript Katas Starter
+# 12 Days of Christmas TDD Kata
 
-This is a basic starter repository for doing katas in TypeScript, with tests using [Jest](https://jestjs.io/docs/getting-started). 
+I did a kata focussed on coding while focussing on keeping increments small - then finished it off out of interest.
 
-- Write your kata solutions in the `app` directory.
-- Write test files in the `tests` directory.
+This is based on a basic starter repository for doing katas in TypeScript, with tests using [Jest](https://jestjs.io/docs/getting-started). 
 
-## Suggested Katas
+## Other suggested Katas
 
 [Made Tech Katas](https://learn.madetech.com/katas/)
 
