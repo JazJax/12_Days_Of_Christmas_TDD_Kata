@@ -10,6 +10,10 @@ export class Song {
         } else if(verseNumber == 2){
             resultArray.push('Two turtle doves, and')
             resultArray.push('A partridge in a pear tree')
+        } else if(verseNumber == 3){
+            resultArray.push('Three french hens')
+            resultArray.push('Two turtle doves, and')
+            resultArray.push('A partridge in a pear tree')
         }
         
         return resultArray.join('\n')
