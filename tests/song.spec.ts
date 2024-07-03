@@ -1,4 +1,5 @@
 import { Song } from '@/song';
+import * as fs from 'fs';
 
 // Should return the first line of the 1st verse
 // Should return the first line of the 2nd verse
@@ -58,19 +59,11 @@ describe('SingVerse', () => {
 });
 
 describe('SingSong', () => {
-  it('should sing the first 2 verses', () => {
+  it('should sing the whole song', () => {
     const mySong: Song = new Song
+    const expectedResult: String = fs.readFileSync('tests/fullsong.txt','utf8');
+
     const result: string = mySong.SingSong()
-    console.log(result)
-    expect(result).toBe(
-      ["On the first day of Christmas",
-        "My true love gave to me",
-        "A partridge in a pear tree",
-        "\n",
-        "On the second day of Christmas",
-        "My true love gave to me",
-        "Two turtle doves, and",
-        "A partridge in a pear tree"
-      ].join('\n'))
+    expect(result).toBe(expectedResult)
   })
 })

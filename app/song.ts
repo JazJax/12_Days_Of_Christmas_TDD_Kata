@@ -3,8 +3,11 @@ export class Song {
     SingSong(): string {
         let verseArray: String[] = []
 
-        verseArray.push(this.SingVerse(1))
-        verseArray.push(this.SingVerse(2))
+        let verse: number = 1
+        while (verse <=12){
+            verseArray.push(this.SingVerse(verse))
+            verse ++
+        }
         
         return verseArray.join("\n\n\n")
     }
